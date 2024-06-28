@@ -1,0 +1,39 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main # Replace with the branch you want to trigger the workflow on
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 1) Type check
+      - name: Type check
+        run: |
+          npm run type-check
+
+      # 2) Lint check
+      - name: Lint check
+        run: |
+          npm run lint
+
+      # 3) test check
+      - name: Run tests
+        run: |
+          npm run test
+
+      # 3) coverage check
+      - name: Run coverage
+        run: |
+          npm run coverage
+
+      # Add your deployment steps here
+      - name: Deploy
+        run: |
+          # Add your deployment commands here

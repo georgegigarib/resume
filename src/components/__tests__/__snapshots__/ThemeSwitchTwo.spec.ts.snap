@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ThemeSwitchTwo > should mount the component 1`] = `"<label data-v-92108eaa="" class="switch"><input data-v-92108eaa="" type="checkbox"><span data-v-92108eaa="" class="slider"></span></label>"`;
